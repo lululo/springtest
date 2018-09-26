@@ -9,7 +9,8 @@ public class JDBCDemo {
     static final String DB_URL = "jdbc:mysql://localhost:3306/hvi";
     static final String USER = "root";
     static final String PASS = "root";
-    public void commit(){
+
+    public void commit() {
         Connection conn = null;
         Statement stmt = null;
         try {
@@ -21,7 +22,7 @@ public class JDBCDemo {
         System.out.println("Connecting to database...");
 
         try {
-            conn = DriverManager.getConnection(DB_URL,USER,PASS);
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
             //关闭自动事务
             conn.setAutoCommit(false);
             System.out.println("Creating statement...");
@@ -45,10 +46,7 @@ public class JDBCDemo {
     }
 
 
-
-
-
-    public void mysqlTest(){
+    public void mysqlTest() {
         Connection conn = null;
         Statement stmt = null;
         try {
@@ -59,7 +57,7 @@ public class JDBCDemo {
         }
         System.out.println("Connecting to database...");
         try {
-            conn = DriverManager.getConnection(DB_URL,USER,PASS);
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
             conn.setAutoCommit(false);
             System.out.println("Creating statement...");
             stmt = conn.createStatement();
@@ -69,7 +67,7 @@ public class JDBCDemo {
             sql = "SELECT * FROM hvibottlecopy";
             stmt = conn.createStatement();
             ResultSet rs1 = stmt.executeQuery(sql);
-            while(rs.next()){
+            while (rs.next()) {
                 //Retrieve by column name
                 String first = rs.getString("编号");
                 String last = rs.getString("类别");
@@ -77,7 +75,7 @@ public class JDBCDemo {
                 System.out.print(", First: " + first);
                 System.out.println(", Last: " + last);
             }
-            while(rs1.next()){
+            while (rs1.next()) {
                 //Retrieve by column name
                 int first = rs1.getInt("TOID");
                 String last = rs1.getString("ID");
