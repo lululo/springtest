@@ -11,6 +11,7 @@ public class helloworld {
     RedisUtil redisUtil;
     @RequestMapping("he")
     public void show(){
+        redisUtil.set("h","hkad");
         System.out.println(redisUtil);
     }
 }
