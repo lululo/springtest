@@ -27,19 +27,19 @@ public class RedisConfig {
     @Value("${redis.timeout}")
     private int timeout;
 //    @Value("${redis.maxIdle}")
-//    private Integer maxIdle;
+//    private  maxIdle;
 //
 //    @Value("${redis.maxTotal}")
-//    private Integer maxTotal;
+//    private  maxTotal;
 //
 //    @Value("${redis.maxWaitMillis}")
-//    private Integer maxWaitMillis;
+//    private  maxWaitMillis;
 //
 //    @Value("${redis.minEvictableIdleTimeMillis}")
-//    private Integer minEvictableIdleTimeMillis;
+//    private  minEvictableIdleTimeMillis;
 //
 //    @Value("${redis.numTestsPerEvictionRun}")
-//    private Integer numTestsPerEvictionRun;
+//    private  numTestsPerEvictionRun;
 //
 //    @Value("${redis.timeBetweenEvictionRunsMillis}")
 //    private long timeBetweenEvictionRunsMillis;
