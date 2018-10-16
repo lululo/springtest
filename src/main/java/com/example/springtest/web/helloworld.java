@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
+import java.util.Map;
+
 @Controller
 public class helloworld {
     @Autowired
@@ -16,9 +19,11 @@ public class helloworld {
         redisUtil.set("h","hkad");
         System.out.println(redisUtil);
     }
-    @ResponseBody
-    @RequestMapping("show")
-    public String showString(){
-        return "hello world";
+
+    @RequestMapping("sucess")
+    public String showString(Map<String,Object> map){
+        map.put("hello", "<h1>你好</h1>");
+        map.put("users", Arrays.asList("zhangsan","lisi","wangwu"));
+        return "sucess";
     }
 }

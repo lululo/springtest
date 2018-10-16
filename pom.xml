@@ -22,6 +22,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+        <!--<thymeleaf.version>3.0.9</thymeleaf.version>-->
+        <!--布局功能的支持程序 thymeleaf 3 要搭配 thymeleaf-layout-dialect 2以上版本使用-->
+        <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
     </properties>
 
     <dependencies>
@@ -39,7 +42,6 @@
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
             <version>3.3.1</version>
-
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
