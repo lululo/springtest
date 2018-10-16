@@ -1,2 +1,7 @@
 server:
   port: 8080
+
+#  日志
+logging:
+#  path: /log
+  file: springtest.log
